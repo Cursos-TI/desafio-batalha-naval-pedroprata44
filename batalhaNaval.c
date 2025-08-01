@@ -6,26 +6,36 @@
 
 int main() {
     
-    int tabuleiro[5][5];
-    int posicaoNavio1[2] = {0,5};
-    int posicaoNavio2[2] = {5,0};
+    int tabuleiro[10][10];
+    int posicaoNavio1[2] = {0,9};
+    int posicaoNavio2[2] = {9,0};
+    int posicaoNavio3[2] = {5,3};
+    int posicaoNavio4[2] = {3,5};
     
-    for(int i = 0; i < 6; i++){
-        for(int j = 0; j < 6; j++){
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
             if(i == posicaoNavio1[0] && j == posicaoNavio1[1]){
-                tabuleiro[i][j] = 1;
+                tabuleiro[i][j] = 3;
                 continue;
             }
             if(i == posicaoNavio2[0] && j == posicaoNavio2[1]){
-                tabuleiro[i][j] = 1;
+                tabuleiro[i][j] = 3;
+                continue;
+            }
+            if(i == posicaoNavio3[0] && j == posicaoNavio3[1]){
+                tabuleiro[i][j] = 3;
+                continue;
+            }
+            if(i == posicaoNavio4[0] && j == posicaoNavio4[1]){
+                tabuleiro[i][j] = 3;
                 continue;
             }
             tabuleiro[i][j] = 0;
         }
     }
 
-    for(int i = 0; i < 6; i++){
-        for(int j = 0; j < 6; j++){
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
             printf("%d", tabuleiro[i][j]);
         }
         printf("\n");
