@@ -5,6 +5,32 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 int main() {
+    
+    int tabuleiro[5][5];
+    int posicaoNavio1[2] = {0,5};
+    int posicaoNavio2[2] = {5,0};
+    
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++){
+            if(i == posicaoNavio1[0] && j == posicaoNavio1[1]){
+                tabuleiro[i][j] = 1;
+                continue;
+            }
+            if(i == posicaoNavio2[0] && j == posicaoNavio2[1]){
+                tabuleiro[i][j] = 1;
+                continue;
+            }
+            tabuleiro[i][j] = 0;
+        }
+    }
+
+    for(int i = 0; i < 6; i++){
+        for(int j = 0; j < 6; j++){
+            printf("%d", tabuleiro[i][j]);
+        }
+        printf("\n");
+    }
+
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
